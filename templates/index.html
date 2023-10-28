@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+<!--This is our Frontend-->
+{% block body %}
+<h1>Task List</h1>
+<ul>
+  {% for task in task_list %}
+  <li>{{ task }}</li>
+  {% endfor %}
+</ul>
+
+<a href="{{ url_for('add') }}">Add New Task</a>
+{% endblock %}

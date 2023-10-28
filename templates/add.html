@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+<!--This is our backend-->
+{% block body %}
+<h1>Add Tasks</h1>
+<form action="{{ url_for('add')}}" method="post">
+  <input
+    type="text"
+    name="task"
+    id="inp-task"
+    placeholder="Type in a new task"
+  />
+  <button>Add</button>
+</form>
+{% endblock %}
